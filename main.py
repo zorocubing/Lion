@@ -12,10 +12,10 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Lion")
         icon_path = os.path.join(getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__))), "Lion.ico")
         self.setWindowIcon(QIcon(icon_path))
-        self.resize(QSize(200, 50))
+        self.resize(QSize(200, 200))
         
         instructions = QPushButton("Instructions")
-        instructions.setMinimumSize(QSize(200, 50))
+        instructions.setMinimumSize(QSize(200, 200))
         instructions.setToolTip("Click to get instructions")
         instructions.clicked.connect(self.instructions)
 

@@ -1,5 +1,7 @@
 # Lion
 Lion is a PC app (Windows) that lets you check your GPU, CPU &amp; RAM info easily.
+
+# Logo
 <img width="1024" height="1024" alt="IMG_1617" src="https://github.com/user-attachments/assets/796cbf44-ff4f-4a9d-85b2-998a23ac21a7" />
 
 # Use cases

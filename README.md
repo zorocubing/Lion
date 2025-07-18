@@ -7,6 +7,20 @@ Lion is a PC app (Windows) that lets you check your GPU, CPU &amp; RAM info easi
 2. For non-technical users who want to know their CPU or RAM usage, Lion provides an easy way to do that.
 3. For Gamets who are playing games that requires high GPU usage and the game doesn't provide an easy way to check it, you can check it by using Lion.
 
+# Instructions
+
+- Enter 'GPU' to get GPU info.
+- Enter 'CPU' to get CPU info.
+- Enter 'RAM' to get RAM info.
+
+# Features
+- Simple to use
+- Clean UI
+- Less computational usage
+
 # Extra knowledge
 Lion is a modern refreshed look of it's predecessor Percy. Both are essentially the same thing but Lion carries on Percy's mission but better
 Check Percy out here ➡️ https://github.com/zorocubing/Percy
+
+#
+Built with ❤️

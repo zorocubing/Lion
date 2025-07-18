@@ -20,8 +20,9 @@ class MainWindow(QMainWindow):
         instructions.clicked.connect(self.instructions)
 
         text_box = QLineEdit()
-        text_box.setPlaceholderText("Type here...")
+        text_box.setPlaceholderText("Enter command...")
         text_box.setFixedSize(QSize(200, 40))
+        text_box.returnPressed.connect(self.command)
 
         layout = QGridLayout()
         layout.addWidget(instructions, 3, 3, Qt.AlignRight | Qt.AlignBottom)
@@ -41,13 +42,26 @@ class MainWindow(QMainWindow):
         success_btn.setCenterButtons(True)
         success_btn.accepted.connect(dlg.accept)
         layout = QVBoxLayout(dlg)
-        layout.addWidget(QLabel("How to use Lion \n" "Type in 'Drivers' to get GPU Drivers info. \n" "Type in 'GPU' to get GPU name. \n" "Type in 'Memory' to get Memory info. \n" "Type in 'CPU' to get CPU info."))
+        layout.addWidget(QLabel("How to use Lion \n" "Enter 'Drivers' to get GPU Drivers info. \n" "Enter 'GPU' to get GPU name. \n" "Enter 'CPU' to get CPU info. \n" "Enter 'Memory' to get Memory info."))
         layout.addWidget(success_btn)
         dlg.setLayout(layout)
         icon_path = os.path.join(getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__))), "Lion.ico")
         dlg.setWindowIcon(QIcon(icon_path))
         dlg.exec()
 
+    def command(self):
+        dlg = QDialog(self)
+        dlg.setWindowTitle("Command Result")
+        success_btn = QDialogButtonBox(QDialogButtonBox.Ok)
+        success_btn.setCenterButtons(True)
+        success_btn.accepted.connect(dlg.accept)
+        layout = QVBoxLayout(dlg)
+        layout.addWidget(QLabel("Command executed successfully!"))
+        layout.addWidget(success_btn)
+        dlg.setLayout(layout)
+        icon_path = os.path.join(getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__))), "Lion.ico")
+        dlg.setWindowIcon(QIcon(icon_path))
+        dlg.exec()
 
 app = QApplication([])
 

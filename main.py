@@ -25,6 +25,7 @@ class MainWindow(QMainWindow):
         self.text_box.setPlaceholderText("Enter command...")
         self.text_box.setFixedSize(QSize(200, 40))
         self.text_box.returnPressed.connect(self.command)
+        self.text_box.returnPressed.connect(self.text_box.clear)
 
         layout = QGridLayout()
         layout.addWidget(self.instructions, 3, 3, Qt.AlignRight | Qt.AlignBottom)
